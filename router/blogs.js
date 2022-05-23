@@ -11,7 +11,7 @@ blogRouter.get("/blogs/all", async (req, res) => {
 
 // create blogPost
 
-blogRouter.get("blogs/create", async (req, res) => {
+blogRouter.post("/blogs/create", async (req, res) => {
   try {
     const blog = new blogs(req.body);
     const newBlog = await blog.save();
@@ -23,7 +23,7 @@ blogRouter.get("blogs/create", async (req, res) => {
 
 // delete blog
 
-blogRouter.delete("blog/all/:id", async (req, res) => {
+blogRouter.delete("/blog/all/:id", async (req, res) => {
   const id = req.params.id;
   const deleteBlog = await blogs.findByIdAndRemove(id);
   res.json(deleteBlog);

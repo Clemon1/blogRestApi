@@ -24,8 +24,8 @@ app.use(cors());
 
 // Api Routes
 
-app.use(userRouter);
-app.use(blogRouter);
+app.use("/", userRouter);
+app.use("/", blogRouter);
 
 app.listen(PORT, (req, res) => {
   console.log(`App listening on port ${PORT}`);
