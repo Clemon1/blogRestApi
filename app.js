@@ -19,7 +19,7 @@ const app = express();
 console.log(process.env.parsed);
 
 // Middlewares
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); // parse application/json
 app.use(express.json());
 app.use(cors());
