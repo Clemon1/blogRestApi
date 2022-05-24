@@ -17,6 +17,10 @@ const blogSchema = new Schema({
     type: mongoose.Schema.ObjectId,
     ref: "Users",
   },
+  category: {
+    type: mongoose.Schema.ObjectId,
+    ref: "category",
+  },
   date: {
     type: Date,
     default: Date.now(),
